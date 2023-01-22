@@ -1,0 +1,236 @@
+:root {
+  --primary: #010131;
+  --secondary: #1a1a1a;
+  --secondary-1: #4951F5;
+  --font-content: "Roboto", sans-serif;
+  --font-brand: "Rubik Spray Paint", sans-serif;
+  --font-title: "Carter One", cursive;
+}
+
+body {
+  font-family: var(--font-content);
+  background-color: #ececec;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+}
+
+textarea {
+  resize: none;
+}
+
+.cs-bg-primary {
+  background-color: var(--primary);
+}
+
+.cs-bg-secondary {
+  background-color: var(--secondary);
+}
+
+.cs-bg-secondary-1 {
+  background-color: var(--secondary-1);
+}
+
+button.cs-bg-primary:hover {
+  background-color: var(--primary);
+  opacity: 0.9;
+}
+
+button.cs-bg-secondary:hover {
+  background-color: var(--secondary);
+  opacity: 0.9;
+}
+
+button.cs-bg-secondary-1:hover {
+  background-color: var(--secondary-1);
+  opacity: 0.9;
+}
+
+.cs-icon-light-md {
+  background-color: #ececec;
+}
+
+.cs-icon-light-md span {
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.active, a:hover:not(.brand) {
+  text-decoration: underline;
+}
+
+hr {
+  margin: 0;
+}
+
+/* HEADER */
+
+header .navbar {
+  padding: 20px;
+  min-height: 100px;
+  box-shadow: 0 2px 3px var(--primary);
+}
+
+header .navbar .brand {
+  color: #ececec;
+  font-family: var(--font-brand);
+  text-shadow: 0 0 5px var(--secondary);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+header #navbarMenu {
+  padding: 10px 20px;
+  justify-content: flex-end;
+}
+
+header #navbarMenu a {
+  font-family: var(--font-title);
+  color: #ececec;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* CAROUSEL */
+
+#carousel-container {
+  margin-top: 1px;
+  box-shadow: 0 2px 3px #333;
+}
+
+#carousel-container img {
+  height: 70vh;
+  object-fit: cover;
+  object-position: right;
+}
+
+#carousel-container #carousel-content .carousel-image-mask {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+#carousel-container #carousel-content .carousel-item a, .btn-action {
+  padding: 10px 20px;
+  background-color: var(--secondary-1) !important;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  color: #ececec;
+}
+
+#carousel-container #carousel-content .carousel-item a:hover, .btn-action:hover {
+  text-decoration: none !important;
+  opacity: 0.9;
+}
+
+#carousel-container .carousel-caption {
+  bottom: 3.25rem;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 1.25rem;
+  border-radius: 5px;
+  left: 10%;
+  right: 10%;
+}
+
+#carousel-container .carousel-caption p {
+  font-size: 1.1em;
+}
+
+/* ACTUALITIES */
+
+#last-actualities {
+  margin-top: 1.2rem;
+}
+
+.text-content {
+  display: -webkit-box;
+  hyphens: auto;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.6;
+}
+
+/* PRESENTATION */
+
+#presentation article {
+  text-align: justify;
+  box-shadow: 0 0 5px var(--primary);
+}
+
+/* RESERVATION */
+
+.check-film {
+  padding: 10px 20px;
+  background-color: #ececec !important;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  color: var(--secondary);
+}
+
+.btn-check:checked + .check-film, .check-film:hover {
+  color: #ececec !important;
+  background-color: var(--secondary-1) !important;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--secondary);
+  color: #ececec;
+}
+
+footer ul li a {
+  font-weight: 500;
+}
+
+/* MEDIA */
+
+
+@media (min-width: 767px) {
+  header .navbar .brand {
+    font-size: 1.2rem;
+  }
+
+  header #navbarMenu a {
+    font-size: 1rem;
+  }
+
+  #carousel-container .carousel-caption {
+    padding: 3.25rem;
+    left: 20%;
+    right: 20%;
+  }
+
+  #carousel-container .carousel-caption p {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 992px) {
+  header .navbar .brand {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .navbar .brand {
+    font-size: 1.5rem;
+  }
+}
+
